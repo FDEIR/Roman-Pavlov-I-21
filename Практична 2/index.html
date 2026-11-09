@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Замовлення товару</title>
+</head>
+<body>
+
+    <h1>Форма замовлення товару</h1>
+
+    <hr>
+
+    <form>
+        <label>Ім'я покупця:</label><br>
+        <input type="text" name="fname" required><br><br>
+
+        <label>Прізвище:</label><br>
+        <input type="text" name="lname" required><br><br>
+
+        <label>Електронна пошта:</label><br>
+        <input type="email" name="email" required><br><br>
+
+        <label>Номер телефону:</label><br>
+        <input type="tel" name="phone" required><br><br>
+
+        <label>Кількість товару:</label><br>
+        <input type="number" name="count" min="1" max="10" required><br><br>
+
+        <label>Адреса доставки:</label><br>
+        <input type="text" name="address" minlength="10" required><br><br>
+
+        <p>Спосіб доставки:</p>
+        <input type="radio" name="delivery" value="pickup" required>
+        <label>Самовивіз</label><br>
+
+        <input type="radio" name="delivery" value="postomat">
+        <label>Поштомат</label><br>
+
+        <input type="radio" name="delivery" value="courier">
+        <label>Кур'єр</label><br><br>
+
+        <p>Додаткові параметри:</p>
+        <input type="checkbox" name="opt1">
+        <label>Подарункова упаковка</label><br>
+
+        <input type="checkbox" name="opt2">
+        <label>Додаткова гарантія</label><br>
+
+        <input type="checkbox" name="opt3">
+        <label>SMS-повідомлення</label><br>
+
+        <input type="checkbox" name="opt4">
+        <label>Телефонний дзвінок перед доставкою</label><br><br>
+
+        <label>Спосіб оплати:</label><br>
+        <select name="pay">
+            <option>Оплата карткою</option>
+            <option>Оплата при отриманні</option>
+            <option>Банківський переказ</option>
+        </select><br><br>
+
+        <label>Коментар до замовлення:</label><br>
+        <textarea name="comment" maxlength="200"></textarea><br><br>
+
+        <button type="submit">Відправити</button>
+        <button type="reset">Очистити</button>
+    </form>
+
+</body>
+</html>
