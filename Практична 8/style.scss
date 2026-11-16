@@ -1,0 +1,64 @@
+$primary-color: #28a745;
+$padding: 16px;
+$text-size: 14px;
+
+@mixin card-style($border-color, $hover-bg) {
+  border: 1px solid $border-color;
+  border-radius: 8px;
+  padding: $padding;
+  flex: 1;
+  transition: background-color 0.2s, transform 0.2s;
+
+  &:hover {
+    background-color: $hover-bg;
+    transform: translateY(-4px);
+  }
+}
+
+body {
+  font-family: sans-serif;
+  padding: $padding;
+}
+
+.courses {
+  display: flex;
+  gap: $padding;
+
+  .card {
+    @include card-style(#ddd, #f8f9fa);
+
+    h3 {
+      margin-top: 0;
+    }
+
+    p {
+      font-size: $text-size;
+      color: #555;
+    }
+
+    .duration {
+      display: block;
+      margin: 10px 0;
+      font-weight: bold;
+      color: $primary-color;
+    }
+
+    .btn {
+      padding: 8px 16px;
+      background-color: $primary-color;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: opacity 0.2s;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+  }
+}

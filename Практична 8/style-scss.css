@@ -1,0 +1,50 @@
+body {
+  font-family: sans-serif;
+  padding: 16px;
+}
+
+.courses {
+  display: flex;
+  gap: 16px;
+}
+.courses .card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  flex: 1;
+  transition: background-color 0.2s, transform 0.2s;
+}
+.courses .card:hover {
+  background-color: #f8f9fa;
+  transform: translateY(-4px);
+}
+.courses .card h3 {
+  margin-top: 0;
+}
+.courses .card p {
+  font-size: 14px;
+  color: #555;
+}
+.courses .card .duration {
+  display: block;
+  margin: 10px 0;
+  font-weight: bold;
+  color: #28a745;
+}
+.courses .card .btn {
+  padding: 8px 16px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.courses .card .btn:hover {
+  opacity: 0.8;
+}
+@media (max-width: 600px) {
+  .courses {
+    flex-direction: column;
+  }
+}
